@@ -14,6 +14,9 @@ on the command line
 ### Instructions
 Add in the api token in main.py and then execute
 
-```python main.py```
+```
+pipenv shell
+python main.py
+```
 
 from the project root directory
