@@ -50,6 +50,11 @@ class StockBot:
 
             message = update["message"]
             chat_id = message["chat"]["id"]
+
+            if "text" not in message:
+                self.reply_message(chat_id, "This bot only accepts text input.\n\nThank you for trying to break the bot.")
+                continue
+
             # horribly inefficient since there is an I/O operation per msg, but whatever
             users = self.read_users()
             user_text = message["text"]
